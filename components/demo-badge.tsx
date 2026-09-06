@@ -7,7 +7,7 @@ type DemoBadgeProps = {
 export function DemoBadge({ packageName }: DemoBadgeProps) {
   return (
     <div className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur-[2px]">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-2 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-2.5 sm:px-8 sm:py-3">
         <p className="label text-gray-600">
           Demo HelpHub · Pacote {packageName}
         </p>

@@ -13,47 +13,54 @@ export const metadata: Metadata = {
 
 export default function EssencialPage() {
   return (
-    <div className="min-h-full bg-white">
+    <div className="min-h-full bg-paper">
       <DemoBadge packageName="Essencial" />
 
       <main>
-        <section className="mx-auto max-w-xl px-4 pb-16 pt-12 sm:px-6 sm:pt-16">
-          <p className="label text-gray-500">
-            Oficina Norte · Zona Norte · São Paulo
-          </p>
-          <h1 className="mt-5 text-[2rem] font-medium leading-[1.15] tracking-tight sm:text-4xl">
-            Ar-condicionado parado? A gente vai até você hoje.
-          </h1>
-          <p className="mt-5 text-base leading-7 text-gray-600">
-            Manutenção preventiva e reparo residencial e comercial. Técnico
-            certificado, horário combinado no WhatsApp, garantia por escrito.
-            Sem enrolação.
-          </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <WhatsAppLink>Chamar no WhatsApp</WhatsAppLink>
-            <a
-              href="#contato"
-              className="inline-flex h-11 items-center justify-center border border-ink px-5 text-sm font-medium transition-colors duration-200 hover:bg-ink hover:text-paper"
-            >
-              Pedir orçamento
-            </a>
+        <section className="bg-white">
+          <div className="mx-auto max-w-2xl px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-20">
+            <p className="label text-gray-500">
+              Oficina Norte · Zona Norte · São Paulo
+            </p>
+            <h1 className="mt-6 text-4xl font-medium leading-[1.08] tracking-tight sm:text-[2.75rem] sm:leading-[1.1]">
+              Ar-condicionado parado? A gente vai até você hoje.
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-7 text-gray-600 sm:text-lg sm:leading-8">
+              Manutenção preventiva e reparo residencial e comercial. Técnico
+              certificado, horário combinado no WhatsApp, garantia por escrito.
+              Sem enrolação.
+            </p>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppLink size="lg">Chamar no WhatsApp</WhatsAppLink>
+              <a
+                href="#contato"
+                className="inline-flex h-12 items-center justify-center border border-ink px-6 text-sm font-medium transition-colors duration-200 hover:bg-ink hover:text-paper"
+              >
+                Pedir orçamento
+              </a>
+            </div>
           </div>
         </section>
 
         <section className="border-y border-line">
-          <div className="mx-auto max-w-xl px-4 py-12 sm:px-6">
-            <h2 className="text-xl font-medium tracking-tight">
+          <div className="mx-auto max-w-2xl px-5 py-16 sm:px-8 sm:py-20">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-[1.75rem]">
               O que você contrata
             </h2>
-            <ul className="mt-8 divide-y divide-line border-y border-line">
+            <ul className="mt-10 divide-y divide-line border-y border-line">
               {benefits.map((item) => (
-                <li key={item.n} className="grid grid-cols-[3rem_1fr] gap-3 py-6">
-                  <span className="font-mono text-xs text-gray-400">
+                <li
+                  key={item.n}
+                  className="grid grid-cols-[3.5rem_1fr] gap-4 py-8"
+                >
+                  <span className="pt-1 font-mono text-xs text-gray-400">
                     {item.n}
                   </span>
                   <div>
-                    <p className="font-medium">{item.title}</p>
-                    <p className="mt-2 text-sm leading-6 text-gray-600">
+                    <p className="text-lg font-medium tracking-tight">
+                      {item.title}
+                    </p>
+                    <p className="mt-2.5 text-sm leading-7 text-gray-600">
                       {item.body}
                     </p>
                   </div>
@@ -63,45 +70,46 @@ export default function EssencialPage() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-xl px-4 py-12 sm:px-6">
-          <blockquote className="border-l-2 border-ink pl-5">
-            <p className="text-lg leading-8 text-ink">
-              “{testimonial.quote}”
-            </p>
-            <footer className="mt-4 text-sm text-gray-500">
-              {testimonial.name}, {testimonial.role} · {testimonial.place}
-            </footer>
-          </blockquote>
+        <section className="bg-white">
+          <div className="mx-auto max-w-2xl px-5 py-16 sm:px-8 sm:py-20">
+            <blockquote className="border-l-2 border-ink pl-6 sm:pl-8">
+              <p className="text-xl leading-8 tracking-tight sm:text-2xl sm:leading-9">
+                “{testimonial.quote}”
+              </p>
+              <footer className="mt-6 text-sm leading-6 text-gray-500">
+                {testimonial.name}, {testimonial.role} · {testimonial.place}
+              </footer>
+            </blockquote>
+          </div>
         </section>
 
-        <section className="mx-auto max-w-xl px-4 py-4 sm:px-6">
-          <h2 className="mb-4 text-xl font-medium tracking-tight">
+        <section className="mx-auto max-w-2xl px-5 py-16 sm:px-8 sm:py-20">
+          <h2 className="mb-8 text-2xl font-medium tracking-tight sm:text-[1.75rem]">
             Perguntas frequentes
           </h2>
           <FaqList />
         </section>
 
-        <section
-          id="contato"
-          className="mx-auto max-w-xl px-4 pb-20 pt-12 sm:px-6"
-        >
-          <h2 className="text-xl font-medium tracking-tight">
-            Fale com a oficina
-          </h2>
-          <p className="mt-2 text-sm leading-6 text-gray-600">
-            WhatsApp é o caminho mais rápido. Se preferir, deixe nome,
-            telefone e o que o aparelho está fazendo.
-          </p>
-          <div className="mt-6">
-            <WhatsAppLink className="w-full sm:w-auto">
-              Abrir WhatsApp
-            </WhatsAppLink>
+        <section id="contato" className="border-t border-line bg-white">
+          <div className="mx-auto max-w-2xl px-5 py-16 sm:px-8 sm:py-20">
+            <h2 className="text-2xl font-medium tracking-tight sm:text-[1.75rem]">
+              Fale com a oficina
+            </h2>
+            <p className="mt-4 max-w-lg text-sm leading-7 text-gray-600 sm:text-base">
+              WhatsApp é o caminho mais rápido. Se preferir, deixe nome,
+              telefone e o que o aparelho está fazendo.
+            </p>
+            <div className="mt-8">
+              <WhatsAppLink className="w-full sm:w-auto" size="lg">
+                Abrir WhatsApp
+              </WhatsAppLink>
+            </div>
+            <ContactForm className="mt-12" submitLabel="Enviar mensagem" />
           </div>
-          <ContactForm className="mt-10" submitLabel="Enviar mensagem" />
         </section>
       </main>
 
-      <footer className="border-t border-line px-4 py-8 text-center text-xs text-gray-500">
+      <footer className="border-t border-line px-5 py-10 text-center text-xs leading-5 text-gray-500 sm:px-8">
         Oficina Norte · demo HelpHub Essencial · wa.me/5511999999999
       </footer>
     </div>

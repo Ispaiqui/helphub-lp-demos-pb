@@ -15,9 +15,9 @@ export function ContactForm({
     <div
       data-contato-widget
       className={cn(
-        "grid gap-4",
-        tone === "panel" && "border border-line bg-white p-5 sm:p-6",
-        tone === "editorial" && "border-t border-ink pt-8",
+        "grid gap-5",
+        tone === "panel" && "border border-line bg-white p-6 sm:p-8",
+        tone === "editorial" && "border-t border-ink pt-10",
         className,
       )}
     >
@@ -25,7 +25,7 @@ export function ContactForm({
         data-contato-success
         hidden
         role="status"
-        className="border border-ink bg-ink p-5 text-paper sm:p-6"
+        className="border border-ink bg-ink p-6 text-paper sm:p-8"
       >
         <p className="text-lg font-medium">Pedido registrado nesta demo.</p>
         <p className="mt-2 text-sm leading-6 text-gray-200">
@@ -35,13 +35,13 @@ export function ContactForm({
         <button
           type="button"
           data-contato-reset
-          className="mt-5 inline-flex h-11 items-center justify-center bg-paper px-5 text-sm font-medium text-ink"
+          className="mt-6 inline-flex h-12 items-center justify-center bg-paper px-6 text-sm font-medium text-ink"
         >
           Escrever outra mensagem
         </button>
       </div>
 
-      <div data-contato-fields className="grid gap-4">
+      <div data-contato-fields className="grid gap-5">
         <p
           data-contato-banner
           hidden
@@ -57,7 +57,7 @@ export function ContactForm({
             name="nome"
             autoComplete="off"
             placeholder="Seu nome"
-            className="h-11 w-full border border-line bg-white px-3 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
+            className="h-12 w-full border border-line bg-white px-3.5 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
           />
           <span data-error-for="nome" hidden className="text-sm font-medium text-ink">
             Escreva seu nome.
@@ -73,7 +73,7 @@ export function ContactForm({
             autoComplete="off"
             placeholder="(11) 99999-9999"
             data-contato-phone
-            className="h-11 w-full border border-line bg-white px-3 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
+            className="h-12 w-full border border-line bg-white px-3.5 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
           />
           <span
             data-error-for="telefone"
@@ -90,7 +90,7 @@ export function ContactForm({
             name="mensagem"
             autoComplete="off"
             placeholder="Ex.: split da sala não gela, pingando no piso. Residencial Aurora, Santana."
-            className="min-h-28 w-full resize-y border border-line bg-white px-3 py-2.5 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
+            className="min-h-32 w-full resize-y border border-line bg-white px-3.5 py-3 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
           />
           <span
             data-error-for="mensagem"
@@ -104,7 +104,7 @@ export function ContactForm({
         <button
           type="button"
           data-testid="contato-enviar"
-          className="inline-flex h-11 w-full items-center justify-center bg-ink px-5 text-sm font-medium text-paper sm:w-auto"
+          className="inline-flex h-12 w-full items-center justify-center bg-ink px-6 text-sm font-medium text-paper sm:w-auto"
         >
           {submitLabel}
         </button>

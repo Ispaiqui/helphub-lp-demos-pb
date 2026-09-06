@@ -25,35 +25,35 @@ export default function PremiumPage() {
     <div className="min-h-full bg-paper">
       <DemoBadge packageName="Premium" />
 
-      <header className="border-b border-line">
-        <div className="mx-auto flex max-w-6xl items-baseline justify-between px-4 py-5 sm:px-6">
-          <p className="font-serif text-xl tracking-tight">Oficina Norte</p>
+      <header className="border-b border-line bg-paper">
+        <div className="mx-auto flex max-w-6xl items-baseline justify-between px-5 py-6 sm:px-8">
+          <p className="font-serif text-2xl tracking-tight">Oficina Norte</p>
           <p className="label text-gray-500">Zona Norte · São Paulo</p>
         </div>
       </header>
 
-      <section className="mx-auto max-w-6xl px-4 pb-8 pt-10 sm:px-6 sm:pt-16">
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
+      <section className="mx-auto max-w-6xl px-5 pb-10 pt-14 sm:px-8 sm:pb-12 sm:pt-24">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-16">
           <div className="lg:col-span-8">
             <p className="label text-gray-500">Uma terça em Santana</p>
-            <h1 className="mt-5 font-serif text-[2.7rem] leading-[0.95] tracking-tight sm:text-6xl lg:text-[5.25rem]">
+            <h1 className="mt-6 font-serif text-[3rem] leading-[0.92] tracking-tight sm:text-7xl lg:text-[5.75rem]">
               O ar parou.
               <br />
               A gente chega.
             </h1>
           </div>
-          <Reveal immediate delay={0.1} className="lg:col-span-4 lg:pb-2">
-            <p className="max-w-sm text-base leading-7 text-gray-600">
+          <Reveal immediate delay={0.1} className="lg:col-span-4 lg:pb-3">
+            <p className="max-w-sm text-base leading-8 text-gray-600">
               Manutenção e reparo de ar-condicionado para quem administra
               imóvel — síndico, dono de casa, loja na Casa Verde. Sem hype.
               Horário no WhatsApp. Garantia no papel.
             </p>
           </Reveal>
         </div>
-        <RuleGrow className="mt-10" />
+        <RuleGrow className="mt-14" />
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-10 px-4 pb-16 sm:px-6 lg:grid-cols-12">
+      <section className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 sm:px-8 sm:pb-28 lg:grid-cols-12 lg:gap-16">
         <Reveal immediate className="lg:col-span-7">
           <Image
             src="/fig-facade.svg"
@@ -65,29 +65,31 @@ export default function PremiumPage() {
             className="h-auto w-full border border-line"
           />
         </Reveal>
-        <div className="flex flex-col justify-between gap-8 lg:col-span-5">
+        <div className="flex flex-col justify-between gap-12 lg:col-span-5">
           <Reveal delay={0.1}>
-            <p className="font-serif text-2xl leading-snug tracking-tight sm:text-3xl">
+            <p className="font-serif text-2xl leading-snug tracking-tight sm:text-[2rem] sm:leading-[1.2]">
               No Residencial Aurora o split da sala parou de gelar no meio da
               reunião de condomínio. Duas horas depois, o técnico já tinha
               ido embora — e o piso estava seco.
             </p>
-            <p className="mt-5 text-sm leading-7 text-gray-600">
+            <p className="mt-6 text-sm leading-7 text-gray-600">
               Esse é o padrão que a Oficina Norte se propõe a repetir: alguém
               no WhatsApp, uma janela de chegada, um técnico com certificação
               de gases, e o que foi feito escrito. Residência e comércio, da
               Tucuruvi à Vila Maria.
             </p>
           </Reveal>
-          <FloatCta className="border border-ink bg-white p-6">
-            <p className="label text-gray-500">Primeiro chamado</p>
-            <p className="mt-3 font-serif text-2xl leading-tight">
+          <FloatCta className="border border-ink bg-ink p-8 text-paper sm:p-9">
+            <p className="label text-gray-400">Primeiro chamado</p>
+            <p className="mt-4 font-serif text-2xl leading-tight sm:text-[1.75rem]">
               Manda o bairro e o que o aparelho está fazendo.
             </p>
-            <WhatsAppLink className="mt-5 w-full">Abrir WhatsApp</WhatsAppLink>
+            <WhatsAppLink variant="invert" className="mt-7 w-full" size="lg">
+              Abrir WhatsApp
+            </WhatsAppLink>
             <a
               href="#contato"
-              className="mt-3 inline-flex h-11 w-full items-center justify-center text-sm underline-offset-4 hover:underline"
+              className="mt-4 inline-flex h-11 w-full items-center justify-center text-sm text-gray-300 underline-offset-4 hover:text-paper hover:underline"
             >
               ou deixar recado no formulário
             </a>
@@ -96,16 +98,16 @@ export default function PremiumPage() {
       </section>
 
       <section className="bg-ink text-paper">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
           <Reveal>
             <p className="label text-gray-400">A dor, sem metáfora</p>
-            <h2 className="mt-4 max-w-3xl font-serif text-3xl leading-[1.15] sm:text-5xl">
+            <h2 className="mt-5 max-w-3xl font-serif text-4xl leading-[1.12] sm:text-5xl lg:text-[3.5rem]">
               Sala quente. Loja fechando mais cedo. Grupo do prédio pedindo
               “previsão”.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-xl text-sm leading-7 text-gray-300">
+            <p className="mt-8 max-w-xl text-sm leading-7 text-gray-300 sm:text-base sm:leading-8">
               A oficina que “passa aí essa semana” não serve para síndico nem
               para comércio. O que serve é alguém que confirma hoje, chega na
               janela combinada e não some quando precisa trocar uma peça.
@@ -114,19 +116,19 @@ export default function PremiumPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-12">
+      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-5">
             <p className="label text-gray-500">A solução</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight tracking-tight">
+            <h2 className="mt-5 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">
               Uma oficina de Zona Norte, para a Zona Norte.
             </h2>
-            <p className="mt-5 text-sm leading-7 text-gray-600">
+            <p className="mt-6 text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
               Não prometemos a cidade inteira. O técnico sai de base perto de
               Santana. Preventiva, diagnóstico e reparo — split, janela,
               cassete. Peça só depois do seu sim.
             </p>
-            <WhatsAppLink className="mt-8" variant="outline">
+            <WhatsAppLink className="mt-10" variant="outline" size="lg">
               Combinar horário
             </WhatsAppLink>
           </Reveal>
@@ -134,12 +136,12 @@ export default function PremiumPage() {
             {proofPoints.map((point) => (
               <StaggerItem
                 key={point.title}
-                className="bg-paper px-5 py-6 sm:px-7"
+                className="bg-paper px-6 py-8 sm:px-9 sm:py-10"
               >
-                <h3 className="font-serif text-2xl leading-snug">
+                <h3 className="font-serif text-2xl leading-snug sm:text-[1.75rem]">
                   {point.title}
                 </h3>
-                <p className="mt-3 max-w-md text-sm leading-6 text-gray-600">
+                <p className="mt-4 max-w-md text-sm leading-7 text-gray-600">
                   {point.body}
                 </p>
               </StaggerItem>
@@ -149,20 +151,20 @@ export default function PremiumPage() {
       </section>
 
       <section className="border-y border-line bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
-          <Reveal className="lg:max-w-3xl">
-            <p className="font-serif text-[2rem] leading-[1.2] sm:text-5xl">
+        <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+          <Reveal className="lg:max-w-4xl">
+            <p className="font-serif text-[2.15rem] leading-[1.18] sm:text-5xl sm:leading-[1.15]">
               “{testimonial.quote}”
             </p>
-            <p className="mt-8 label text-gray-500">
+            <p className="mt-10 label text-gray-500">
               {testimonial.name} · {testimonial.role} · {testimonial.place}
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <div className="grid gap-10 lg:grid-cols-12">
+      <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal className="lg:col-span-4">
             <Image
               src="/fig-north.svg"
@@ -176,35 +178,39 @@ export default function PremiumPage() {
           <div className="lg:col-span-8">
             <Reveal>
               <p className="label text-gray-500">A oferta</p>
-              <h2 className="mt-3 font-serif text-4xl tracking-tight">
+              <h2 className="mt-5 font-serif text-4xl tracking-tight sm:text-5xl">
                 O que você pede. O que a gente faz.
               </h2>
             </Reveal>
-            <div className="mt-10">
+            <div className="mt-12">
               {offerItems.map((item, index) => (
                 <Reveal
                   key={item.title}
                   delay={index * 0.08}
-                  className="grid gap-3 border-t border-ink py-6 last:border-b sm:grid-cols-[12rem_1fr]"
+                  className="grid gap-4 border-t border-ink py-8 last:border-b sm:grid-cols-[14rem_1fr] sm:gap-10"
                 >
-                  <h3 className="font-serif text-2xl">{item.title}</h3>
-                  <p className="self-center text-sm leading-6 text-gray-600">
+                  <h3 className="font-serif text-2xl leading-snug sm:text-[1.75rem]">
+                    {item.title}
+                  </h3>
+                  <p className="self-center text-sm leading-7 text-gray-600">
                     {item.body}
                   </p>
                 </Reveal>
               ))}
             </div>
-            <p className="mt-4 text-xs text-gray-500">
+            <p className="mt-6 text-xs leading-5 text-gray-500">
               Valor da visita no WhatsApp. Aparelho, andares e horário mudam o
               trabalho — por isso não há tabela genérica nesta página.
             </p>
-            <WhatsAppLink className="mt-8">Pedir visita hoje</WhatsAppLink>
+            <WhatsAppLink className="mt-10" size="lg">
+              Pedir visita hoje
+            </WhatsAppLink>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-        <h2 className="mb-6 font-serif text-3xl tracking-tight">
+      <section className="mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16">
+        <h2 className="mb-8 font-serif text-3xl tracking-tight sm:text-4xl">
           Perguntas que o síndico faz
         </h2>
         <FaqList className="bg-white px-2" />
@@ -212,20 +218,20 @@ export default function PremiumPage() {
 
       <section
         id="contato"
-        className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20"
+        className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28"
       >
-        <div className="grid gap-12 border-t border-ink pt-12 lg:grid-cols-12">
+        <div className="grid gap-14 border-t border-ink pt-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <p className="label text-gray-500">Último chamado</p>
-            <h2 className="mt-4 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">
+            <h2 className="mt-5 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">
               Escreva para a oficina.
             </h2>
-            <p className="mt-5 text-sm leading-7 text-gray-600">
+            <p className="mt-6 max-w-md text-sm leading-7 text-gray-600 sm:text-base sm:leading-8">
               Nome, telefone e o que está acontecendo. Esta demo só valida e
               confirma na tela. No site entregue, o recado segue o mesmo fluxo
               do WhatsApp.
             </p>
-            <WhatsAppLink variant="outline" className="mt-8">
+            <WhatsAppLink variant="outline" className="mt-10" size="lg">
               Preferir WhatsApp
             </WhatsAppLink>
           </div>
@@ -238,14 +244,16 @@ export default function PremiumPage() {
       </section>
 
       <footer className="border-t border-ink bg-ink text-paper">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-5 py-14 sm:flex-row sm:items-end sm:justify-between sm:px-8 sm:py-16">
           <div>
-            <p className="font-serif text-3xl">Oficina Norte</p>
-            <p className="mt-2 text-sm text-gray-400">
+            <p className="font-serif text-4xl leading-none">Oficina Norte</p>
+            <p className="mt-4 text-sm leading-6 text-gray-400">
               Demo HelpHub Premium · wa.me/5511999999999
             </p>
           </div>
-          <WhatsAppLink variant="invert">Chamar agora</WhatsAppLink>
+          <WhatsAppLink variant="invert" size="lg">
+            Chamar agora
+          </WhatsAppLink>
         </div>
       </footer>
       <StickyWhatsApp variant="float" />
