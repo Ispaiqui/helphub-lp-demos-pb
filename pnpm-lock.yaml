@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@helphub/design-system':
-        specifier: file:../../design-system/helphub-design-system
-        version: file:../../design-system/helphub-design-system(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: github:Ispaiqui/helphub-design-system
+        version: https://codeload.github.com/Ispaiqui/helphub-design-system/tar.gz/4125386e1a497da0ddef9527cf4670f9257cb1a1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -187,8 +187,9 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@helphub/design-system@file:../../design-system/helphub-design-system':
-    resolution: {directory: ../../design-system/helphub-design-system, type: directory}
+  '@helphub/design-system@https://codeload.github.com/Ispaiqui/helphub-design-system/tar.gz/4125386e1a497da0ddef9527cf4670f9257cb1a1':
+    resolution: {gitHosted: true, integrity: sha512-cIA+5Rni2bI5PUQlMHRpsIT2bmhHwnOJVVvxbdfcG6VgtCcpqz772owGp1YOXnhtvtSIkDEbfXa7IK5Z652Ryw==, tarball: https://codeload.github.com/Ispaiqui/helphub-design-system/tar.gz/4125386e1a497da0ddef9527cf4670f9257cb1a1}
+    version: 0.1.0
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
@@ -2232,7 +2233,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@helphub/design-system@file:../../design-system/helphub-design-system(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@helphub/design-system@https://codeload.github.com/Ispaiqui/helphub-design-system/tar.gz/4125386e1a497da0ddef9527cf4670f9257cb1a1(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       class-variance-authority: 0.7.1
       clsx: 2.1.1
