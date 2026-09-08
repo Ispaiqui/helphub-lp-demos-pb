@@ -9,7 +9,7 @@ type ContactFormProps = {
 export function ContactForm({
   className,
   tone = "plain",
-  submitLabel = "Enviar pedido",
+  submitLabel = "Enviar",
 }: ContactFormProps) {
   return (
     <div
@@ -29,7 +29,7 @@ export function ContactForm({
       >
         <p className="text-lg font-medium">Pedido registrado nesta demo.</p>
         <p className="mt-2 text-sm leading-6 text-gray-200">
-          No site real, isso iria para a oficina. WhatsApp continua sendo o
+          No site real, isso iria para a empresa. WhatsApp continua sendo o
           caminho mais rápido.
         </p>
         <button
@@ -89,7 +89,7 @@ export function ContactForm({
           <textarea
             name="mensagem"
             autoComplete="off"
-            placeholder="Ex.: split da sala não gela, pingando no piso. Residencial Aurora, Santana."
+            placeholder="Ex.: preciso de atendimento na Região Norte, de preferência esta semana."
             className="min-h-32 w-full resize-y border border-line bg-white px-3.5 py-3 text-base text-ink placeholder:text-gray-400 focus-visible:border-ink focus-visible:outline-none"
           />
           <span
@@ -110,7 +110,7 @@ export function ContactForm({
         </button>
         <p className="text-xs leading-5 text-gray-500">
           Demo sem backend: validamos aqui e mostramos a confirmação. WhatsApp
-          é o canal real desta oficina.
+          é o canal real desta empresa.
         </p>
       </div>
     </div>

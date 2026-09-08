@@ -1,9 +1,9 @@
-import { faqs } from "@/lib/content";
+import { faqs, type FaqItem } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 type FaqListProps = {
   className?: string;
-  items?: typeof faqs;
+  items?: readonly FaqItem[];
 };
 
 export function FaqList({ className, items = faqs }: FaqListProps) {

@@ -1,31 +1,36 @@
 export const whatsappNumber = "5511999999999";
 
 export const whatsappHref = (text?: string) => {
-  const message =
-    text ??
-    "Olá, Oficina Norte. Quero agendar um técnico para o ar-condicionado.";
+  const message = text ?? "Olá. Quero mais informações.";
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 };
 
 export const business = {
-  name: "Oficina Norte",
+  name: "Empresa",
   offer:
-    "Manutenção preventiva e reparo de ar-condicionado residencial e comercial na Zona Norte de São Paulo.",
+    "Atendimento e serviço para quem precisa de resposta rápida, horário combinado e garantia por escrito.",
   audience:
-    "Donos de imóvel e síndicos que querem atendimento rápido, sem ficar cobrando retorno.",
+    "Pessoas e negócios que querem combinar um horário sem ficar cobrando retorno.",
   differentiators: [
-    "Técnicos certificados em gases refrigerantes",
+    "Equipe preparada para o que se propõe a fazer",
     "Agendamento no mesmo dia, quando há vaga",
-    "Garantia por escrito no serviço e nas peças trocadas",
+    "Garantia por escrito no serviço",
   ],
 } as const;
 
 export const testimonial = {
   quote:
-    "Em 2 horas resolveram o split da sala e deixaram tudo limpo. Marquei pelo WhatsApp sem enrolação.",
+    "Em 2 horas resolveram o que eu precisava e deixaram tudo organizado. Marquei pelo WhatsApp sem enrolação.",
   name: "Carla M.",
-  role: "síndica",
-  place: "Residencial Aurora",
+  role: "cliente",
+  place: "Região Norte",
+} as const;
+
+export const testimonialShort = {
+  quote: "Responderam no mesmo dia e cumpriram o horário combinado.",
+  name: "Rafael S.",
+  role: "cliente",
+  place: "Centro",
 } as const;
 
 export const packages = [
@@ -36,7 +41,7 @@ export const packages = [
     price: "R$ 649,70",
     positioning:
       "Página única e direta: hero, benefícios, prova, FAQ e WhatsApp.",
-    density: "Limpo · 1–2 cinzas · transições CSS",
+    density: "Limpo · 1–2 cinzas · fade CSS",
   },
   {
     slug: "plus",
@@ -44,8 +49,8 @@ export const packages = [
     name: "Plus",
     price: "R$ 728,60",
     positioning:
-      "O Essencial com passo a passo e área de atendimento — confiança de bairro.",
-    density: "Layout local · ainda só CSS",
+      "O Essencial com passo a passo, regiões e oferta — confiança local.",
+    density: "Layout local · CSS com stagger",
   },
   {
     slug: "avancado",
@@ -54,7 +59,7 @@ export const packages = [
     price: "R$ 842,30",
     positioning:
       "Arco de conversão completo: dor, solução, prova, oferta e microinterações.",
-    density: "Copy cheia · framer-motion",
+    density: "Copy cheia · framer-motion em todo o arco",
   },
   {
     slug: "premium",
@@ -63,75 +68,90 @@ export const packages = [
     price: "R$ 987,10",
     positioning:
       "O mesmo arco, com tipografia, assimetria e motion de um degrau acima.",
-    density: "Craft editorial · performance",
+    density: "Craft editorial · parallax e motion",
   },
 ] as const;
 
 export type PackageSlug = (typeof packages)[number]["slug"];
 
-export const faqs = [
+export type FaqItem = {
+  q: string;
+  a: string;
+};
+
+export const faqsEssencial: FaqItem[] = [
   {
     q: "Vocês atendem no mesmo dia?",
     a: "Sim, quando há vaga na agenda. Pelo WhatsApp confirmamos horário em poucos minutos — sem deixar você esperando retorno no dia seguinte.",
   },
   {
-    q: "É só residência ou também comércio?",
-    a: "Os dois. Apartamento, casa, escritório e loja na Zona Norte. Síndico e dono de ponto comercial falam com o mesmo time.",
-  },
-  {
     q: "Tem garantia?",
-    a: "Tem. O serviço sai com garantia por escrito. Prazo e cobertura dependem do tipo de reparo e das peças que forem trocadas — isso fica claro antes de começar.",
-  },
-  {
-    q: "Preciso estar no imóvel?",
-    a: "Alguém precisa receber o técnico: morador, zelador ou síndico. Combinamos quem abre a porta na hora do agendamento.",
+    a: "Tem. O serviço sai com garantia por escrito. Prazo e cobertura ficam claros antes de começar.",
   },
   {
     q: "Como funciona o orçamento?",
-    a: "Você descreve o que está acontecendo no WhatsApp ou no formulário. Passamos o valor da visita e do diagnóstico antes de qualquer peça. Nada segue sem o seu ok.",
+    a: "Você descreve o que precisa no WhatsApp ou no formulário. Passamos o valor antes de qualquer trabalho extra. Nada segue sem o seu ok.",
   },
-] as const;
+];
+
+export const faqs: FaqItem[] = [
+  ...faqsEssencial,
+  {
+    q: "Atendem pessoa física e empresa?",
+    a: "Os dois. Casa, escritório e ponto comercial. Quem decide e quem recebe falam com o mesmo time.",
+  },
+  {
+    q: "Preciso estar no local?",
+    a: "Alguém precisa receber a equipe. Combinamos quem abre a porta na hora do agendamento.",
+  },
+];
+
+export const faqsPremium: FaqItem[] = [
+  ...faqs,
+  {
+    q: "Posso agendar para outra pessoa?",
+    a: "Pode. Informe o nome de quem recebe, o endereço e um telefone de contato. Confirmamos os dois lados no WhatsApp.",
+  },
+  {
+    q: "Vocês emitem nota?",
+    a: "Sim, quando o serviço pede. Combinamos isso no agendamento, junto com o valor.",
+  },
+];
 
 export const neighborhoods = [
-  "Santana",
-  "Tucuruvi",
-  "Mandaqui",
-  "Casa Verde",
-  "Vila Guilherme",
-  "Vila Maria",
-  "Jardim São Paulo",
-  "Carandiru",
-  "Imirim",
-  "Lauzane Paulista",
-  "Tremembé",
-  "Jaçanã",
-  "Vila Medeiros",
-  "Parque Novo Mundo",
+  "Região Norte",
+  "Centro",
+  "Zona Leste",
+  "Zona Oeste",
+  "Zona Sul",
+  "ABC",
+  "Litoral",
+  "Interior próximo",
 ] as const;
 
 export const steps = [
   {
     n: "01",
     title: "Você chama",
-    body: "WhatsApp ou formulário. Diz o que o aparelho está fazendo — pingando, sem gelar, barulho, cheiro.",
+    body: "WhatsApp ou formulário. Diz o que precisa e quando prefere ser atendido.",
   },
   {
     n: "02",
     title: "A gente confirma o horário",
-    body: "Se houver vaga, encaixamos no mesmo dia. Você recebe o nome do técnico e a janela de chegada.",
+    body: "Se houver vaga, encaixamos no mesmo dia. Você recebe o nome de quem vai e a janela de chegada.",
   },
   {
     n: "03",
-    title: "O técnico resolve e registra",
-    body: "Diagnóstico na frente de quem receber. Peça só com aprovação. Serviço com garantia por escrito.",
+    title: "A equipe resolve e registra",
+    body: "Trabalho na frente de quem receber. Extra só com aprovação. Serviço com garantia por escrito.",
   },
 ] as const;
 
 export const benefits = [
   {
     n: "01",
-    title: "Técnico certificado",
-    body: "Quem entra no imóvel tem certificação em gases refrigerantes e sabe o que pode e o que não pode improvisar.",
+    title: "Equipe preparada",
+    body: "Quem chega sabe o que pode e o que não pode improvisar. Sem enrolação no primeiro contato.",
   },
   {
     n: "02",
@@ -141,36 +161,36 @@ export const benefits = [
   {
     n: "03",
     title: "Garantia no papel",
-    body: "Você recebe o que foi feito, o que foi trocado e até quando vale a garantia. Sem letra miúda no Zap.",
+    body: "Você recebe o que foi feito e até quando vale a garantia. Sem letra miúda no Zap.",
   },
 ] as const;
 
 export const proofPoints = [
   {
-    title: "Certificação, não “experiência de anos”",
-    body: "O técnico que sobe no Residencial Aurora ou entra na loja da Casa Verde tem papel de gases refrigerantes. Não mandamos ajudante sozinho no primeiro contato.",
+    title: "Preparação, não “experiência de anos”",
+    body: "Quem entra no local sabe o que veio fazer. Não mandamos alguém despreparado no primeiro contato.",
   },
   {
     title: "Horário combinado, não “passamos aí”",
-    body: "Janela de chegada no WhatsApp. Se atrasar, avisamos. Síndico e comércio não podem ficar o dia inteiro esperando.",
+    body: "Janela de chegada no WhatsApp. Se atrasar, avisamos. Quem trabalha não pode ficar o dia inteiro esperando.",
   },
   {
-    title: "Orçamento antes da peça",
-    body: "Visita e diagnóstico têm valor combinado. Compressor, placa ou gás só entram depois do seu sim. A garantia sai por escrito.",
+    title: "Valor antes do extra",
+    body: "Visita e serviço têm valor combinado. Qualquer acréscimo só entra depois do seu sim. A garantia sai por escrito.",
   },
 ] as const;
 
 export const offerItems = [
   {
     title: "Visita e diagnóstico",
-    body: "Checagem do split, janela ou cassete. Valor da visita combinado no WhatsApp, antes de sair o técnico.",
+    body: "Avaliamos o que precisa ser feito. Valor da visita combinado no WhatsApp, antes de sair a equipe.",
   },
   {
-    title: "Manutenção preventiva",
-    body: "Limpeza, drenagem, filtros e leitura de gás. O tipo de visita que evita a sala quente no meio da semana.",
+    title: "Serviço principal",
+    body: "O trabalho combinado, do começo ao fim, com o que ficou registrado no agendamento.",
   },
   {
-    title: "Reparo",
-    body: "Vazamento, placa, motor, drenagem entupida. Peça só com aprovação. Residência e comércio.",
+    title: "Serviço extra",
+    body: "Peça, troca ou etapa que só aparece no local. Só segue com a sua aprovação.",
   },
 ] as const;

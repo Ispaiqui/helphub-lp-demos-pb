@@ -1,0 +1,22 @@
+.hub-shell {
+  color-scheme: light;
+  min-height: 100vh;
+
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --primary-hover: #3b82f6;
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+html.dark .hub-shell {
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --primary-hover: #3b82f6;
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+.hub-shell .label {
+  color: var(--primary);
+}

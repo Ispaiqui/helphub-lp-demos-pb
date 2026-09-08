@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "@helphub/design-system/tokens.css";
+@import "@helphub/design-system/theme.css";
+
+@source "../node_modules/@helphub/design-system/src/**/*.{js,ts,jsx,tsx}";
 
 :root {
   --paper: #f7f7f5;
@@ -37,6 +41,51 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@keyframes hh-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hh-in {
+  animation: hh-fade-up 0.48s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hh-in-d1 {
+  animation-delay: 80ms;
+}
+
+.hh-in-d2 {
+  animation-delay: 160ms;
+}
+
+.hh-in-d3 {
+  animation-delay: 240ms;
+}
+
+.hh-in-d4 {
+  animation-delay: 320ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hh-in,
+  .hh-in-d1,
+  .hh-in-d2,
+  .hh-in-d3,
+  .hh-in-d4 {
+    animation: none;
+  }
 }
 
 body {

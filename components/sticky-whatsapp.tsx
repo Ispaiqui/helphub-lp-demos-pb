@@ -19,7 +19,7 @@ export function StickyWhatsApp({ variant }: StickyWhatsAppProps) {
           className="flex h-12 items-center justify-center gap-2 bg-ink text-sm font-medium text-paper"
         >
           <WhatsAppIcon className="size-4" />
-          Chamar no WhatsApp
+          WhatsApp
         </a>
       </div>
     );
@@ -33,7 +33,7 @@ export function StickyWhatsApp({ variant }: StickyWhatsAppProps) {
       className={cn(
         "fixed bottom-6 right-6 z-40 flex size-14 items-center justify-center rounded-full bg-ink text-paper shadow-[0_10px_30px_rgba(0,0,0,0.28)] transition-transform duration-200 hover:scale-105",
       )}
-      aria-label="Abrir WhatsApp da Oficina Norte"
+      aria-label="WhatsApp"
     >
       <WhatsAppIcon className="size-6" />
     </a>

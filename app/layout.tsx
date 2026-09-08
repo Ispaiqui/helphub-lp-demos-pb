@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s · HelpHub",
   },
   description:
-    "Quatro landing pages de demonstração (Essencial, Plus, Avançado e Premium) com o mesmo negócio fictício: Oficina Norte. Visual preto, branco e cinza, de propósito.",
+    "Quatro landing pages de demonstração (Essencial, Plus, Avançado e Premium) com o mesmo negócio fictício: Empresa. Visual preto, branco e cinza, de propósito.",
   icons: { icon: "/favicon.svg" },
 };
 
